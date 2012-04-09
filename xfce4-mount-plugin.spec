@@ -27,8 +27,6 @@ A mount panel plugin for the Xfce Desktop Environment.
 rm -rf %{buildroot}
 %makeinstall_std 
 
-%find_lang xfce4-mount
-
 %post
 %update_icon_cache hicolor
 
@@ -38,7 +36,7 @@ rm -rf %{buildroot}
 %clean
 rm -rf %{buildroot}
 
-%files -f xfce4-mount.lang
+%files 
 %defattr(-,root,root)
 %doc README ChangeLog AUTHORS
 %{_datadir}/xfce4/panel-plugins/*.desktop
