@@ -1,17 +1,16 @@
 Summary:	Mount plugin for the Xfce panel
 Name:		xfce4-mount-plugin
-Version:	0.5.5
-Release:	%mkrel 9
+Version:	0.6.3
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin
 Source0:	http://goodies.xfce.org/releases/xfce4-mount-plugin/%{name}-%{version}.tar.bz2
-Requires:	xfce4-panel >= 4.4.2
-BuildRequires:	xfce4-panel-devel >= 4.4.2
-BuildRequires:	libxfcegui4-devel >= 4.4.2
+Requires:	xfce4-panel >= 4.9.0
+BuildRequires:	xfce4-panel-devel >= 4.9.0
+BuildRequires:	libxfce4ui-devel >= 4.9.0
 BuildRequires:	perl(XML::Parser)
 Obsoletes:	xfce-mount-plugin
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A mount panel plugin for the Xfce Desktop Environment.
@@ -24,20 +23,9 @@ A mount panel plugin for the Xfce Desktop Environment.
 %make
 
 %install
-rm -rf %{buildroot}
-%makeinstall_std 
+%makeinstall_std
 
-%post
-%update_icon_cache hicolor
-
-%postun
-%clean_icon_cache hicolor
-
-%clean
-rm -rf %{buildroot}
-
-%files 
-%defattr(-,root,root)
+%files
 %doc README ChangeLog AUTHORS
 %{_datadir}/xfce4/panel-plugins/*.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
