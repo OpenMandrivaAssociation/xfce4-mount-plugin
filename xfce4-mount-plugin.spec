@@ -27,8 +27,7 @@ A mount panel plugin for the Xfce Desktop Environment.
 
 %files
 %doc README ChangeLog AUTHORS
-%{_datadir}/xfce4/panel-plugins/*.desktop
-%{_iconsdir}/hicolor/*/apps/*.png
-%{_libdir}/xfce4/panel-plugins/*
-%{_iconsdir}/hicolor/scalable/apps/*.svg
+%{_datadir}/xfce4/panel/plugins/*.desktop
+%{_iconsdir}/hicolor/*/apps/*.*g
+%{_libdir}/xfce4/panel/plugins/libmout.so
 %lang(all) %{_datadir}/locale/*/LC_MESSAGES/xfce4-mount-plugin.mo
