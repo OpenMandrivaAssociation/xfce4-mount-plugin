@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   xfce4-mount-plugin-0.6.7.tar.bz2: aff1b5883cd6b3e80989dcc963579b0078631712
+sources:
+  xfce4-mount-plugin-1.1.2.tar.bz2: 9f310b24066af381b1842adb8bdd62c519e8e88b
