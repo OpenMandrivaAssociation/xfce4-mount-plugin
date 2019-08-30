@@ -9,9 +9,9 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-mount-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
-Requires:	xfce4-panel >= 4.4.2
+Requires:	xfce4-panel
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
-BuildRequires:	pkgconfig(libxfce4ui-2) >= 4.11
+BuildRequires:	pkgconfig(libxfce4ui-2)
 BuildRequires:	perl(XML::Parser)
 Obsoletes:	xfce-mount-plugin
 
@@ -22,11 +22,11 @@ A mount panel plugin for the Xfce Desktop Environment.
 %setup -q
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files 
 %doc README ChangeLog AUTHORS
