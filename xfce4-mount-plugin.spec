@@ -3,7 +3,7 @@
 
 Summary:	Mount plugin for the Xfce panel
 Name:		xfce4-mount-plugin
-Version:	1.1.3
+Version:	1.1.4
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -29,7 +29,7 @@ A mount panel plugin for the Xfce Desktop Environment.
 %make_install
 
 %files 
-%doc README ChangeLog AUTHORS
+%doc README* ChangeLog AUTHORS
 %{_datadir}/xfce4/panel/plugins/*.desktop
 %{_iconsdir}/hicolor/*/apps/*
 %{_libdir}/xfce4/panel/plugins/*
